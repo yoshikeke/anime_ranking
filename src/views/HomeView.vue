@@ -1,20 +1,7 @@
+<!-- Home.vue -->
 <template>
     <div>
-        home
+        <h1>ホームページ</h1>
+        <p>ようこそ！</p>
     </div>
 </template>
-
-<script>
-
-export default {
-
-    components: {
-
-    }
-}
-
-</script>
-
-<style scoped>
-
-</style>
