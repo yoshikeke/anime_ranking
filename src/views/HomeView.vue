@@ -1,7 +1,5 @@
-<!-- Home.vue -->
 <template>
     <div>
-        <h1>ホームページ</h1>
-        <p>ようこそ！</p>
+        Home
     </div>
 </template>
