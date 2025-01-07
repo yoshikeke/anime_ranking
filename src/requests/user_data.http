@@ -1,0 +1,3 @@
+
+
+curl -X GET https://api.annict.com/v1/me?access_token=7ZBzErf1XP8dbbADwrJcH_WDCcrLRFpv64ha5s6g8Vg
