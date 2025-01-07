@@ -1,59 +1,8 @@
 <template>
   <div class="tier-container">
-    <draggable v-model="data1" group="shared" class="draggable-container">
+    <draggable v-for="(tier, index) in tiers" :key="index" v-model="tier.data" group="shared" class="draggable-container">
       <template #header>
-        <div class="tier-label">S</div>
-      </template>
-      <template #item="{element}">
-        <div :key="element.id" class="Tier">
-          <span class="tier-content">{{ element.content }}</span>
-        </div>
-      </template>
-    </draggable>
-    
-    <draggable v-model="data2" group="shared" class="draggable-container">
-      <template #header>
-        <div class="tier-label">A</div>
-      </template>
-      <template #item="{element}">
-        <div :key="element.id" class="Tier">
-          <span class="tier-content">{{ element.content }}</span>
-        </div>
-      </template>
-    </draggable>
-    <draggable v-model="data3" group="shared" class="draggable-container">
-      <template #header>
-        <div class="tier-label">B</div>
-      </template>
-      <template #item="{element}">
-        <div :key="element.id" class="Tier">
-          <span class="tier-content">{{ element.content }}</span>
-        </div>
-      </template>
-    </draggable>
-    <draggable v-model="data4" group="shared" class="draggable-container">
-      <template #header>
-        <div class="tier-label">C</div>
-      </template>
-      <template #item="{element}">
-        <div :key="element.id" class="Tier">
-          <span class="tier-content">{{ element.content }}</span>
-        </div>
-      </template>
-    </draggable>
-    <draggable v-model="data5" group="shared" class="draggable-container">
-      <template #header>
-        <div class="tier-label">D</div>
-      </template>
-      <template #item="{element}">
-        <div :key="element.id" class="Tier">
-          <span class="tier-content">{{ element.content }}</span>
-        </div>
-      </template>
-    </draggable>
-    <draggable v-model="allData" group="shared" class="draggable-container">
-      <template #header>
-        <div class="tier-label">未分類</div>
+        <div class="tier-label">{{ tier.name }}</div>
       </template>
       <template #item="{element}">
         <div :key="element.id" class="Tier">
@@ -66,25 +15,30 @@
 
 <script>
 import draggable from "vuedraggable";
+
 export default {
   components: {
     draggable
   },
   data() {
     return {
-      data1: [],
-      data2: [],
-      data3: [],
-      data4: [],
-      data5: [],
-      data6: [],
-      allData: [
-        {id: 1, content: "アイテム1"},
-        {id: 2, content: "アイテム2"},
-        {id: 3, content: "アイテム3"},
-        {id: 4, content: "アイテム4"},
-        {id: 5, content: "アイテム5"},
-        {id: 6, content: "アイテム6"},
+      tiers: [
+        { name: "S", data: [] },
+        { name: "A", data: [] },
+        { name: "B", data: [] },
+        { name: "C", data: [] },
+        { name: "D", data: [] },
+        { name: "未分類", data: [
+          { id: 1, content: "item1"},
+          { id: 2, content: "item2"},
+          { id: 3, content: "item3"},
+          { id: 4, content: "item4"},
+          { id: 5, content: "item5"},
+          { id: 6, content: "item6"},
+          { id: 7, content: "item7"},
+          { id: 8, content: "item8"},
+          { id: 9, content: "item9"},
+        ] }
       ]
     }
   }
@@ -132,6 +86,7 @@ export default {
 
 .tier-content {
   font-size: 14px;
+  color: black;
   text-align: center;
   word-break: break-all;
 }
