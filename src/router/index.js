@@ -4,6 +4,7 @@ import About from '../views/AboutView.vue';
 import Edit from '../views/EditTier.vue';
 import Mypage from '../views/MyPage.vue';
 import Login from '../views/LoginScreen.vue';
+import Register from '../views/RegisterUser.vue';
 
 
 const routes = [
@@ -12,6 +13,7 @@ const routes = [
   { path: '/edit', component: Edit },
   { path: '/mypage', component: Mypage},
   { path: '/', component: Login},
+  { path: '/register', component: Register}
 ];
 
 const router = createRouter({
