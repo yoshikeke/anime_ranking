@@ -1,4 +1,9 @@
 <template>
+  <nav>
+      <router-link to="/home">ホーム</router-link> | 
+      <router-link to="/edit">作成</router-link>|
+      <router-link to="/mypage">マイページ</router-link>
+  </nav>
   <div class="tier-container">
     <draggable v-for="(tier, index) in tiers" :key="index" v-model="tier.data" group="shared" class="draggable-container">
       <template #header>
@@ -10,6 +15,9 @@
         </div>
       </template>
     </draggable>
+  </div>
+  <div class="anime-list">
+
   </div>
 </template>
 

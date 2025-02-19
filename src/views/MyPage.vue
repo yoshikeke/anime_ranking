@@ -1,4 +1,9 @@
 <template>
+  <nav>
+      <router-link to="/home">ホーム</router-link> | 
+      <router-link to="/edit">作成</router-link>|
+      <router-link to="/mypage">マイページ</router-link>
+    </nav>
   <div>
     <h1>My Page</h1>
     <button @click="logout">Logout</button>

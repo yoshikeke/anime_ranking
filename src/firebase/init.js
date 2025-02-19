@@ -4,7 +4,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 import * as firebaseui from "firebaseui";
 
 // Your web app's Firebase configuration
@@ -42,4 +42,4 @@ var uiConfig = {
 
 var ui = new firebaseui.auth.AuthUI(auth);
 
-export { app, firebase, auth, db, ui, uiConfig, firebaseui };
+export { app, firebase, auth, db, ui, uiConfig, firebaseui, doc, getDoc };

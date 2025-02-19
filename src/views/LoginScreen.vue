@@ -8,10 +8,9 @@
 
 <script>
 import 'firebaseui/dist/firebaseui.css';
-import { auth, ui, uiConfig, db } from "@/firebase/init.js";
+import { auth, ui, uiConfig, db, doc, getDoc } from "@/firebase/init.js";
 import { ref, onMounted } from "vue";
 import { useRouter } from 'vue-router';
-import { doc, getDoc } from "firebase/firestore";
 
 
 export default {
@@ -28,10 +27,10 @@ export default {
           const userRef = doc(db, "users", currentUser.uid);
           const userDoc = await getDoc(userRef);
           if (!userDoc.exists()) {
-            router.push('/home');
+            router.push('/register'); //未登録ユーザーは登録画面へ
           } else {
-            router.push('/resister');
-          }   router.push('/about');
+            router.push('/home'); //登録済みユーザーはホーム画面へ
+          }   
         }   
       });
     });  
