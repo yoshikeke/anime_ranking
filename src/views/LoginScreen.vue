@@ -8,9 +8,11 @@
 
 <script>
 import 'firebaseui/dist/firebaseui.css';
-import { auth, ui, uiConfig } from "@/firebase/init.js";
+import { auth, ui, uiConfig, db } from "@/firebase/init.js";
 import { ref, onMounted } from "vue";
 import { useRouter } from 'vue-router';
+import { doc, getDoc } from "firebase/firestore";
+
 
 export default {
   setup() {
@@ -38,7 +40,7 @@ export default {
       await auth.signOut();
       user.value = null;
     };  
-    return { user, logout };  return {};
+    return { user, logout };  
   },  
 };
 </script>

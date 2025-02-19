@@ -32,6 +32,7 @@ var uiConfig = {
     }
   },
   signInFlow: 'popup',
+  signInSuccessUrl: '/home',
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
   ],
