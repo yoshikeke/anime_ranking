@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>firebase UI login</h1>
+  <div class="login-screen">
+    <h1>Annict tier maker</h1>
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
   </div>
@@ -43,4 +43,14 @@ export default {
   },  
 };
 </script>
+
+<style scoped>
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+</style>
 

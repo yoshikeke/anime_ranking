@@ -1,9 +1,5 @@
 <template>
-  <nav>
-    <router-link to="/home">ホーム</router-link> | 
-    <router-link to="/edit">作成</router-link> |
-    <router-link to="/mypage">マイページ</router-link>
-  </nav>
+  
   <div class="tier-container">
     <draggable v-for="(tier, index) in tiers" :key="index" v-model="tier.data" group="shared" class="draggable-container">
       <template #header>
@@ -103,16 +99,17 @@ export default {
 .tier-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
 }
 
 .draggable-container {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   align-items: center;
   background: #f5f5f5;
-  padding: 10px;
+  padding: 5px;
   border-radius: 4px;
+  flex-wrap: wrap;
 }
 
 .tier-label {
@@ -129,8 +126,8 @@ export default {
   cursor: pointer;
   padding: 0px;
   border: solid #ddd 1px;
-  width: 140px;
-  height: 70px;
+  width: 80px;
+  height: 40px;
   background: white;
   border-radius: 4px;
   display: flex;
@@ -139,7 +136,7 @@ export default {
 }
 
 .tier-image {
-  width: 140px;
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -163,5 +160,25 @@ export default {
   width: 75px;
   height: 50px;
   margin-right: 10px;
+}
+@media (min-width: 600px) {
+  .Tier {
+    width: 120px;
+    height: 60px;
+  }
+  .anime-image {
+    width: 100px;
+    height: 75px;
+  }
+}
+@media (min-width: 900px) {
+  .Tier {
+    width: 160px;
+    height: 80px;
+  }
+  .anime-image {
+    width: 125px;
+    height: 100px;
+  }
 }
 </style>

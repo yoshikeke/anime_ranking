@@ -1,12 +1,11 @@
 <template>
-  <div>
+  <div class="register-user">
     <h1>Register User</h1>
-    <div>
-        <input v-model="username" placeholder="ユーザー名" required />
+    <div class="input-container">
         <input v-model="accessToken" placeholder="アクセストークン" required />
-        <button @click="registerUser">Register</button>
     </div>
-    <div>
+    <v-btn class="register-button" @click="registerUser">登録</v-btn>
+    <div class="link-container">
         <a href="https://annict.com/settings/apps" target="_blank">アクセストークンの取得</a>
     </div>
   </div>
@@ -25,8 +24,8 @@ export default {
     const router = useRouter();
 
     const registerUser = async () => {
-      if (!username.value || !accessToken.value) {
-        alert("すべての項目を入力してください");
+      if (!accessToken.value) {
+        alert("項目を入力してください");
         return;
       }
 
@@ -61,4 +60,50 @@ export default {
 </script>
 
 <style scoped>
+.register-user {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-user h1 {
+  margin-bottom: 20px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-button {
+  margin-bottom: 20px;
+}
+
+.link-container {
+  margin-top: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+v-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+v-btn:hover {
+  background-color: #0056b3;
+}
 </style>
