@@ -10,6 +10,9 @@ https://animetier-54ccf.web.app/
 - vue draggable
 - rest api でのデータの取得
 
+# アーキテクチャ図
+
+![asdf](https://github.com/yoshikeke/anime_ranking/blob/main/src/images/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202025-02-25%2013.17.07.png)
 
 # 環境構築
 1. Node.jsをインストール
@@ -48,6 +51,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+export { app, analytics
 ```
 
 [firebaseをjavascriptアプリに追加する](https://firebase.google.com/docs/web/setup?hl=ja&_gl=1*1aqiyx6*_up*MQ..*_ga*MTQzMTk1OTEzNi4xNzQwNDQ1Nzk1*_ga_CW55HF8NVT*MTc0MDQ0NTc5NS4xLjAuMTc0MDQ0NTc5NS4wLjAuMA..)
@@ -61,6 +66,28 @@ init.jsを参照
 npm install vue-router
 ```
 
+# 実装編
+1. ログイン機能を実装する
+
+[firebaseUIでログイン機能の追加](https://firebase.google.com/docs/auth/web/firebaseui?hl=ja)
+   
+2. 既存、新規ユーザーでルーティング
+
+init.jsのuiCofig方でルーティングできないか試したが、firebaseの設定ファイルの中でvueの機能は使えないので、LoginScreen.vueのauth.onAuthStateChangedの中でルーティングした
+
+[firestore databaseのデータを取得する方法](https://firebase.google.com/docs/firestore/query-data/get-data?hl=ja&_gl=1*1gsitne*_up*MQ..*_ga*NTUxODY5ODgzLjE3NDA0NTg3ODk.*_ga_CW55HF8NVT*MTc0MDQ1ODc4OS4xLjAuMTc0MDQ1ODc4OS4wLjAuMA..)
+[vue-routerの使い方](https://qiita.com/hshota28/items/765cf903f055754f7557)
+
+3. annictにリクエスト
+
+[jsでhttpリクエストをする方法](https://developer.mozilla.org/ja/docs/Web/API/Fetch_API/Using_Fetch)
+   
+4. 画像の表示
+   
+5. ドラッグコンポーネントの実装
+
+かなりの曲者,elementってなんなんだ
+[vue-draggableサンプルコード](https://sortablejs.github.io/Vue.Draggable/#/simple)
 
 # Vuetify (Default)
 
