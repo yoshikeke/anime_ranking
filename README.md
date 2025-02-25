@@ -10,6 +10,7 @@ https://animetier-54ccf.web.app/
 - vue draggable
 - rest api でのデータの取得
 
+
 # 環境構築
 1. Node.jsをインストール
 2. vueファイルを作成
@@ -51,7 +52,15 @@ const analytics = getAnalytics(app);
 
 [firebaseをjavascriptアプリに追加する](https://firebase.google.com/docs/web/setup?hl=ja&_gl=1*1aqiyx6*_up*MQ..*_ga*MTQzMTk1OTEzNi4xNzQwNDQ1Nzk1*_ga_CW55HF8NVT*MTc0MDQ0NTc5NS4xLjAuMTc0MDQ0NTc5NS4wLjAuMA..)
 
-4.init.jsにfirebaseのもろもろの機能を追加
+4. init.jsにfirebaseのもろもろの機能を追加
+
+init.jsを参照
+
+5. vue-routerのインポート
+```
+npm install vue-router
+```
+
 
 # Vuetify (Default)
 
