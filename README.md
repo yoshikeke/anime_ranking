@@ -87,6 +87,7 @@ init.jsのuiCofig方でルーティングできないか試したが、firebase�
 5. ドラッグコンポーネントの実装
 
 かなりの曲者,elementってなんなんだ
+
 [vue-draggableサンプルコード](https://sortablejs.github.io/Vue.Draggable/#/simple)
 
 # Vuetify (Default)
