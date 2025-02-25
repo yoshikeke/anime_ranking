@@ -1,6 +1,58 @@
 アプリケーションはこちら
 https://animetier-54ccf.web.app/
 
+# 今回挑戦してみた技術
+- firebase authentication
+- firestore database
+- firebase hosting
+- firebase ui ←　時間かかった...
+- vue router
+- vue draggable
+- rest api でのデータの取得
+
+# 環境構築
+1. Node.jsをインストール
+2. vueファイルを作成
+```
+npm create vue@latest
+```
+3. vueアプリにfirebaseを追加
+   
+firebaseプロジェクトを作成
+
+アプリを登録する
+
+```
+npm install firebase
+```
+
+firebaseオブジェクトの追加
+
+firebaseコンソールからプロジェクトの設定→マイアプリのコードをコピペ
+
+```src/firebase/init.js
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  ......
+  ......
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+```
+
+[firebaseをjavascriptアプリに追加する](https://firebase.google.com/docs/web/setup?hl=ja&_gl=1*1aqiyx6*_up*MQ..*_ga*MTQzMTk1OTEzNi4xNzQwNDQ1Nzk1*_ga_CW55HF8NVT*MTc0MDQ0NTc5NS4xLjAuMTc0MDQ0NTc5NS4wLjAuMA..)
+
+4.init.jsにfirebaseのもろもろの機能を追加
+
 # Vuetify (Default)
 
 This is the official scaffolding tool for Vuetify, designed to give you a head start in building your new Vuetify application. It sets up a base template with all the necessary configurations and standard directory structure, enabling you to begin development without the hassle of setting up the project from scratch.
